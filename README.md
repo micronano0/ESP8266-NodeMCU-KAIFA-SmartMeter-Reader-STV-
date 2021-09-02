@@ -21,7 +21,7 @@ Mit dem Link "Zählerwerte anzeigen" werden die Daten vom Zähler angezeigt.
 
 # Unterstützte SmartMeter
 
-* Kaifa Ma110 1-Phasenzähler
+* Kaifa MA110M 1-Phasenzähler
 * Kaifa MA309M 3-Phasenzähler
 
 
