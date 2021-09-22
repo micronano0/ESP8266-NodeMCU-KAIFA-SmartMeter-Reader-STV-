@@ -660,9 +660,9 @@ void loop() {
                     {
                       dataLength = plaintext[currentPosition-1];
                       memcpy(&uint8Value, &plaintext[currentPosition-1], 1); // Copy byte to integer
-                      int zaehlernummerlen = 2*uint8Value;
+                      int zaehlernummerlen = uint8Value;
                       uint8Value = swap_uint16(uint16Value); // Swap bytes
-                       memcpy(&zaehlernummer, &plaintext[currentPosition-1], zaehlernummerlen); // Copy byte to integer
+                       memcpy(&zaehlernummer, &plaintext[currentPosition], zaehlernummerlen); // Copy byte to integer
                         Serial.print("\nZaehlernummer:\t\t\t\t"); Serial.print(zaehlernummer);
                        werte += "</br><strong>Z&auml;hlernummer:&nbsp;</strong>" + String(zaehlernummer);
                     }
@@ -670,9 +670,9 @@ void loop() {
                     {
                       dataLength = plaintext[currentPosition-1];
                       memcpy(&uint8Value, &plaintext[currentPosition-1], 1); // Copy byte to integer
-                      int devicenamelen = 2*uint8Value;
+                      int devicenamelen = uint8Value;
                       uint8Value = swap_uint16(uint16Value); // Swap bytes
-                       memcpy(&devicename, &plaintext[currentPosition-1], devicenamelen); // Copy byte to integer
+                       memcpy(&devicename, &plaintext[currentPosition], devicenamelen); // Copy byte to integer
                         Serial.print("\nDevicename:\t\t\t\t"); Serial.print(devicename);
                         werte += "</br><strong>Devicename:&nbsp;</strong>" + String(devicename);
                     }
